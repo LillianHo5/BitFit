@@ -18,4 +18,13 @@ interface EntryDao {
 
     @Query("DELETE FROM entry_table")
     fun deleteAll()
+
+    @Query("SELECT AVG(calories) as calories FROM entry_table")
+    fun averageCalories(): Int
+
+    @Query("SELECT MIN(calories) as calories FROM entry_table")
+    fun minCalories(): Int
+
+    @Query("SELECT MAX(calories) as calories FROM entry_table")
+    fun maxCalories(): Int
 }

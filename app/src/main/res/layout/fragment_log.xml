@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".LogFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/entry_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="581dp"
+        tools:listitem="@layout/item_entry" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="60dp"
+        android:padding="15dp"
+        android:text="Input Food Data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.174"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/entry_recycler_view"
+        app:layout_constraintVertical_bias="0.505" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.423"
+        android:layout_marginBottom="65dp"
+        android:layout_marginRight="50dp"
+        android:layout_gravity="bottom|end"
+        app:layout_constraintStart_toEndOf="@+id/addButton" />
+
+</FrameLayout>
